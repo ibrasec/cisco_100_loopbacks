@@ -1,6 +1,6 @@
 # cisco_100_loopbacks
 
-cisco_100_loopbacks creates 100 loopback interfaces
+cisco_100_loopbacks.sh code creates 100 loopback interfaces
 each with an ip address of 172.16.x.0/24
 where x is the loopback id address
 example:
