@@ -38,7 +38,7 @@
 # user@user$./cisco_100_loopbacks.sh 10.1.1.1 <username> <password>
 
 # Set variables
-set device [lindex $argv 0]
+set address [lindex $argv 0]
 set username [lindex $argv 1]
 set password [lindex $argv 2]
 set enpasswd [lindex $argv 3]
@@ -47,27 +47,27 @@ set sec [clock seconds]
 set time [clock format $sec -format %H-%M-%S]
 
 # Don't check keys
-spawn ssh -o StrictHostKeyChecking=no $username\@$device
+spawn ssh -o StrictHostKeyChecking=no $username\@$address
 
 # Please don't change the following timeout value
 set timeout 1
 
 
-# Announce device & time
+# Announce address & time
 send_user "\n"
-send_user ">      Working on $device @ [exec date]     <\n"
+send_user ">      Working on $address @ [exec date]     <\n"
 send_user "\n"
 
 
 
 expect {
-timeout { send_error "\nTimeout Exceeded - Check connectivity with Host $device\n";exit 1 }
-eof { send_error "\nSSH Connection To $device Failed\n"; exit 1 }
+timeout { send_error "\nTimeout Exceeded - Check connectivity with Host $address\n";exit 1 }
+eof { send_error "\nSSH Connection To $address Failed\n"; exit 1 }
 "*assword" {
 send "$password\r"
 expect "*assword" {
   send_error "\n"
-  send_error "\nError processing $device: The specified username or password is incorrect, please try again\n"
+  send_error "\nError processing $address: The specified username or password is incorrect, please try again\n"
   exit 1
 }
 }
@@ -112,4 +112,3 @@ expect "*(config)#"
 send "exit\r"
 expect "*#"
 send_user "\n"
-
