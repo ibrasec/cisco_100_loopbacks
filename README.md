@@ -21,6 +21,8 @@ example:
  To change the ip address from 172.16.x.0/24
  currently you can go to the last lines where you can see the below code
  
+ 
+ 
  for {set id 1} {$id < 101} {incr id 1} {
  
  send "interface loopback $id\r"
@@ -32,6 +34,8 @@ example:
  sleep 0.1
 
  }
+
+
 
 
 then just change the below 
