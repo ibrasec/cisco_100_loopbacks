@@ -22,10 +22,15 @@ example:
  currently you can go to the last lines where you can see the below code
  
  for {set id 1} {$id < 101} {incr id 1} {
+ 
 send "interface loopback $id\r"
+
 expect "*(config-if)#"
+
 send "ip address 172.16.$id.1 255.255.255.0\r"
+
 sleep 0.1
+
 }
 
 
