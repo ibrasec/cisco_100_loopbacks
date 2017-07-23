@@ -18,10 +18,10 @@ example:
  
  example:
  
- user@user$./cisco_100_loopbacks.sh 10.1.1.1 <username> <password> <enablepassword>
+ user@user$./cisco_100_loopbacks.sh 10.1.1.1 cisco_user cisco_passwd cisco
  
  
- user@user$./cisco_100_loopbacks.sh 10.1.1.1 <username> <password>
+ user@user$./cisco_100_loopbacks.sh 10.1.1.1 cisco cisco 
  
  
  
