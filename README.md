@@ -5,6 +5,7 @@ each with an ip address of 172.16.x.0/24
 where x is the loopback id address
 
 example:
+
  loo1 assigned with the ip address 172.16.1.0/24
  
  loo2 assigned with the ip address 172.16.2.0/24
@@ -16,7 +17,10 @@ example:
  if no enabelpassword is configured, it is ok just to type Enter To execute the code.
  
  example:
+ 
  user@user$./cisco_100_loopbacks.sh 10.1.1.1 <username> <password> <enablepassword>
+ 
+ 
  user@user$./cisco_100_loopbacks.sh 10.1.1.1 <username> <password>
  
  
