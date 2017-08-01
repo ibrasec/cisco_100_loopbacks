@@ -12,6 +12,8 @@ example:
  
 
  To trigger this code, simlpy type the below on your linux shell
+ 
+ 
  ./cisco_100_loopbacks.sh 192.168.1.1 username password enablepasword
  
  if no enabelpassword is configured, it is ok just to type Enter To execute the code.
