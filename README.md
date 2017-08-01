@@ -2,7 +2,8 @@
 
 cisco_100_loopbacks.sh code creates 100 loopback interfaces
 each with an ip address of 172.16.x.0/24
-where x is the loopback id address
+where x is the loopback id address, i found this code usefull if i want to have fun with BGP,
+where i could populate the BGP table of multiple routers with lots of ip addresses and have them exchanged.
 
 example:
 
@@ -14,7 +15,7 @@ example:
  To trigger this code, simlpy type the below on your linux shell
  
  
- ./cisco_100_loopbacks.sh 192.168.1.1 username password enablepasword
+  user@user$./cisco_100_loopbacks.sh 192.168.1.1 username password enablepasword
  
  if no enabelpassword is configured, it is ok just to type Enter To execute the code.
  
